@@ -230,12 +230,12 @@ const SITE_DATA = {
       time: '10-20 min',
       needsEmail: true,
       needsId: false,
-      optOutUrl: 'https://www.mylife.com/opt-out',
+      optOutUrl: 'https://www.mylife.com/privacyrequest',
       note: '',
       steps: [
         'Find your profile on mylife.com',
         'Copy the URL of your profile',
-        'Go to mylife.com/opt-out',
+        'Go to https://www.mylife.com/privacyrequest',
         'Submit the opt-out request with your details',
         'Confirm via email if required',
         'Check back later to verify removal'

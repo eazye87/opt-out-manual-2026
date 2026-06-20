@@ -156,7 +156,7 @@ Thank you,
 |**ID Crawl** (idcrawl.com)                  |🟢 Easy    |⏱️ 5-10 minutes |📧           |—        |https://www.idcrawl.com/optout                 |
 |**Instant Checkmate** (instantcheckmate.com)|🟡 Medium  |⏱️ 10-15 minutes|📧           |—        |https://www.instantcheckmate.com/opt-out/      |
 |**Intelius** (intelius.com)                 |🟡 Medium  |⏱️ 10-15 minutes|📧           |—        |https://www.intelius.com/opt-out/              |
-|**MyLife** (mylife.com)                     |🟡 Medium  |⏱️ 10-20 minutes|📧           |—        |https://www.mylife.com/opt-out                 |
+|**MyLife** (mylife.com)                     |🟡 Medium  |⏱️ 10-20 minutes|📧           |—        |https://www.mylife.com/privacyrequest          |
 |**Nuwber** (nuwber.com)                     |🟢 Easy    |⏱️ 5-10 minutes |📧           |—        |https://nuwber.com/removal/link                |
 |**OfficialUSA** (officialusa.com)           |🟡 Medium  |⏱️ 10-20 minutes|📧           |—        |https://www.officialusa.com/remove             |
 |**PeekYou** (peekyou.com)                   |🟢 Easy    |⏱️ 5-10 minutes |—           |—        |https://www.peekyou.com/about/contact/optout   |
@@ -375,14 +375,14 @@ Thank you,
 <summary>🔎 <strong>MyLife</strong> — 🟡 Medium • ⏱️ 10-20 minutes</summary>
 
 **Domain:** `mylife.com`  
-**Opt-Out:** https://www.mylife.com/opt-out  
+**Opt-Out:** https://www.mylife.com/privacyrequest  
 **Requirements:** 📧 Email confirmation • No ID required
 
 ### ✅ Steps
 
 - [ ] Find your profile on mylife.com
 - [ ] Copy the URL of your profile
-- [ ] Go to mylife.com/opt-out
+- [ ] Go to https://www.mylife.com/privacyrequest
 - [ ] Submit the opt-out request with your details
 - [ ] Confirm via email if required
 - [ ] Check back later to verify removal
