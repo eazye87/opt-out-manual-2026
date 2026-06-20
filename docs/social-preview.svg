@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c18"/>
+      <stop offset="100%" style="stop-color:#0d0a1a"/>
+    </linearGradient>
+
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+
+    <!-- Shield glow -->
+    <filter id="shieldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Text glow -->
+    <filter id="textGlow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Amber glow -->
+    <filter id="amberGlow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle noise texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Clip for rounded corners -->
+    <clipPath id="roundedClip">
+      <rect x="0" y="0" width="1200" height="630" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Dot grid pattern -->
+  <g opacity="0.13">
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.2" fill="#818cf8"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#dots)"/>
+  </g>
+
+  <!-- Diagonal accent lines top-right -->
+  <g opacity="0.06" stroke="#818cf8" stroke-width="1">
+    <line x1="700" y1="-100" x2="1400" y2="600"/>
+    <line x1="750" y1="-100" x2="1450" y2="600"/>
+    <line x1="800" y1="-100" x2="1500" y2="600"/>
+    <line x1="850" y1="-100" x2="1550" y2="600"/>
+    <line x1="650" y1="-100" x2="1350" y2="600"/>
+  </g>
+
+  <!-- Left amber vertical bar -->
+  <rect x="0" y="0" width="6" height="630" fill="#f59e0b" opacity="0.9"/>
+
+  <!-- Shield glow halo -->
+  <ellipse cx="230" cy="315" rx="160" ry="180" fill="#4f46e5" opacity="0.12" filter="url(#shieldGlow)"/>
+
+  <!-- Shield icon — large, left side -->
+  <g transform="translate(90, 135) scale(2.85)" filter="url(#shieldGlow)">
+    <!-- Shield body -->
+    <path fill="url(#shieldGrad)" d="M70 8L16 26v44c0 33 26 57 54 66 28-9 54-33 54-66V26L70 8z" opacity="0.95"/>
+    <!-- Shield inner highlight -->
+    <path fill="none" stroke="#a5b4fc" stroke-width="1.5" stroke-opacity="0.4"
+          d="M70 12L20 28v42c0 30 23 52 50 61 27-9 50-31 50-61V28L70 12z"/>
+    <!-- Checkmark -->
+    <path fill="none" stroke="#e0e7ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+          d="M48 71l14 14 28-28"/>
+  </g>
+
+  <!-- Amber lock-broken accent (small, top of shield area) -->
+  <g transform="translate(272, 148)" opacity="0.85">
+    <rect x="0" y="8" width="22" height="16" rx="2.5" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <path d="M5 8V5.5a6 6 0 0 1 12 0" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+    <!-- open part -->
+    <path d="M17 5.5V4a6 6 0 0 1 6 6" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="11" cy="16" r="2" fill="#f59e0b"/>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="340" y1="80" x2="340" y2="550" stroke="#818cf8" stroke-width="1" opacity="0.18"/>
+
+  <!-- RIGHT SIDE: Text content -->
+  <!-- Label: category badge -->
+  <rect x="376" y="88" width="210" height="32" rx="6" fill="rgba(99,102,241,0.18)" stroke="#6366f1" stroke-width="1"/>
+  <text x="481" y="109" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" font-weight="700" fill="#818cf8" text-anchor="middle" letter-spacing="2">
+    PRIVACY TOOLS
+  </text>
+
+  <!-- Main headline: OPT-OUT -->
+  <text x="376" y="215"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="102" font-weight="900" fill="#ffffff" letter-spacing="-3"
+        filter="url(#textGlow)">
+    OPT-OUT
+  </text>
+
+  <!-- GUIDE 2026 — indigo + amber combo -->
+  <text x="376" y="315"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="102" font-weight="900" fill="#818cf8" letter-spacing="-2">
+    GUIDE
+  </text>
+  <text x="752" y="315"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="102" font-weight="900" fill="#f59e0b" letter-spacing="-2"
+        filter="url(#amberGlow)">
+    2026
+  </text>
+
+  <!-- Separator line under headline -->
+  <rect x="376" y="336" width="760" height="2" rx="1" fill="url(#shieldGrad)" opacity="0.5"/>
+
+  <!-- Subtitle -->
+  <text x="376" y="378"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="22" fill="#94a3b8" font-weight="400" letter-spacing="0.2">
+    Step-by-step removal from 443+ data broker &amp; people-search sites.
+  </text>
+
+  <!-- Stats pills row -->
+  <!-- Pill 1 -->
+  <rect x="376" y="408" width="168" height="36" rx="18" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
+  <text x="460" y="431" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="600" fill="#a5b4fc" text-anchor="middle">🛡️ Free &amp; Open Source</text>
+
+  <!-- Pill 2 -->
+  <rect x="556" y="408" width="148" height="36" rx="18" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.35)" stroke-width="1"/>
+  <text x="630" y="431" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="600" fill="#fbbf24" text-anchor="middle">443+ Sites</text>
+
+  <!-- Pill 3 -->
+  <rect x="716" y="408" width="152" height="36" rx="18" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.35)" stroke-width="1"/>
+  <text x="792" y="431" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="600" fill="#6ee7b7" text-anchor="middle">No Tracking</text>
+
+  <!-- OSINT Framework featured badge -->
+  <rect x="376" y="465" width="248" height="42" rx="8" fill="rgba(15,23,42,0.8)" stroke="rgba(245,158,11,0.6)" stroke-width="1.5"/>
+  <!-- Star icon -->
+  <text x="393" y="491" font-size="16">⭐</text>
+  <text x="418" y="491"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" font-weight="700" fill="#f59e0b" letter-spacing="0.5">
+    Featured on OSINT Framework
+  </text>
+
+  <!-- Bottom: thumpersecure branding -->
+  <rect x="0" y="576" width="1200" height="54" fill="rgba(0,0,0,0.45)"/>
+  <!-- GitHub mark -->
+  <g transform="translate(376, 591)" fill="#64748b">
+    <path d="M9 0C4.03 0 0 4.03 0 9c0 3.98 2.58 7.36 6.16 8.55.45.08.61-.19.61-.43 0-.21-.01-.92-.01-1.67-2.26.41-2.84-.55-3.02-1.05-.1-.26-.54-1.05-.92-1.27-.31-.17-.76-.58-.01-.59.7-.01 1.2.65 1.37.92.8 1.35 2.08.97 2.59.74.08-.58.31-.97.57-1.19-1.99-.22-4.07-.99-4.07-4.41 0-.97.35-1.78.92-2.4-.09-.23-.4-1.14.09-2.38 0 0 .75-.24 2.46.92a8.54 8.54 0 0 1 2.24-.3c.76 0 1.52.1 2.24.3 1.71-1.16 2.46-.92 2.46-.92.49 1.24.18 2.15.09 2.38.57.62.92 1.42.92 2.4 0 3.43-2.09 4.19-4.08 4.41.32.28.6.82.6 1.66 0 1.2-.01 2.16-.01 2.46 0 .24.16.52.62.43A9.01 9.01 0 0 0 18 9c0-4.97-4.03-9-9-9z"/>
+  </g>
+  <text x="400" y="607"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#64748b" font-weight="500">
+    github.com/thumpersecure/opt-out-manual-2026
+  </text>
+
+  <!-- Right: URL -->
+  <text x="1136" y="607"
+        font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="13" fill="#475569" text-anchor="end">
+    thumpersecure.github.io/opt-out-manual-2026
+  </text>
+
+</svg>
