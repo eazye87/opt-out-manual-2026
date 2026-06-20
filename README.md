@@ -113,6 +113,8 @@ I’m excited to share that the “Awesome Opt-Out Guide 2026” is now featured
 1. Confirm via email/phone if required.
 1. Re-check in 24–72 hours and repeat if multiple listings appear.
 
+> ⚠️ **Site refusing to remove your data?** See [What to do when a site won't comply](https://github.com/thumpersecure/opt-out-manual-2026/issues/9) for escalation steps, FTC/AG complaints, and legal remedies.
+
 ## ✅ Before You Begin (Checklist)
 
 - [ ] Use a fresh browser tab (incognito/private helps).
