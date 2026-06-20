@@ -488,15 +488,16 @@ const SITE_DATA = {
       needsEmail: false,
       needsId: false,
       optOutUrl: 'https://www.truepeoplesearch.com/removal',
-      note: '',
+      note: 'Owner hidden behind GoDaddy Domains By Proxy privacy shield (domain registered 2008, paid through 2029). Site runs behind Cloudflare. If the form fails or gets no response, email directly — these addresses were verified active via SMTP (June 2026): privacy@truepeoplesearch.com (not publicly listed — best for data requests), support@truepeoplesearch.com (their public address, CC this). Escalation: abuse@truepeoplesearch.com. If ignored after 14 days, file with GoDaddy (abuse@godaddy.com / +1-480-624-2505) and Cloudflare (abuse@cloudflare.com) — both can pressure or suspend the site. Physical mail: PO Box 7775 PMB 29296, San Francisco CA 94120-7775.',
       steps: [
-        'Find your record on truepeoplesearch.com',
-        'Copy the URL of your record',
-        'Go to truepeoplesearch.com/removal',
-        'Paste the record URL into the removal form',
-        'Complete the CAPTCHA',
-        'Submit the removal request',
-        'Check back later to confirm removal'
+        'Search your name on truepeoplesearch.com and find your listing',
+        'Copy the full URL of your record (looks like /find/person/pXXXXXXX)',
+        'Go to https://www.truepeoplesearch.com/removal',
+        'Paste your record URL and complete the CAPTCHA',
+        'Submit — no email confirmation required',
+        'Check back in 24-72 hours to confirm removal',
+        'If the form fails: email privacy@truepeoplesearch.com (CC support@truepeoplesearch.com) with your name, address, phone, and listing URL',
+        'If no response in 14 days: escalate to abuse@truepeoplesearch.com and file reports with abuse@godaddy.com and abuse@cloudflare.com'
       ]
     },
     {
